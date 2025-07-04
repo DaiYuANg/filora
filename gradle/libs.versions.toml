@@ -1,9 +1,56 @@
 [versions]
 quarkus = "3.24.2"
+quarkus-minio = "3.8.4"
+mapstruct = "1.6.3"
+record-builder = "47"
+vavr = "0.10.6"
 
 [plugins]
 quarkus = { id = "io.quarkus", version.ref = "quarkus" }
+lombok = { id = "name.remal.lombok", version = "3.0.1" }
+dotenv = { id = "co.uzzu.dotenv.gradle", version = "4.0.0" }
+version-check = { id = "com.github.ben-manes.versions", version = "0.52.0" }
+git = { id = "com.xenoterracide.gradle.git", version = "0.12.1" }
 
 [libraries]
 quarkus-bom = { group = "io.quarkus.platform", name = "quarkus-bom", version.ref = "quarkus" }
-quarkus-blaze-persistence-bom = { group = "io.quarkus.platform", name = "quarkus-blaze-persistence-bom", version.ref = "quarkus" }
+quarkus-rest = { group = "io.quarkus", name = "quarkus-rest" }
+quarkus-flyway = { group = "io.quarkus", name = "quarkus-flyway" }
+quarkus-scheduler = { group = "io.quarkus", name = "quarkus-scheduler" }
+quarkus-smallrye-jwt = { group = "io.quarkus", name = "quarkus-smallrye-jwt" }
+quarkus-jdbc-postgresql = { group = "io.quarkus", name = "quarkus-jdbc-postgresql" }
+quarkus-rest-jackson = { group = "io.quarkus", name = "quarkus-rest-jackson" }
+quarkus-hibernate-reactive-panache = { group = "io.quarkus", name = "quarkus-hibernate-reactive-panache" }
+quarkus-agroal = { group = "io.quarkus", name = "quarkus-agroal" }
+quarkus-hibernate-reactive = { group = "io.quarkus", name = "quarkus-hibernate-reactive" }
+quarkus-info = { group = "io.quarkus", name = "quarkus-info" }
+quarkus-rest-client = { group = "io.quarkus", name = "quarkus-rest-client" }
+quarkus-config-yaml = { group = "io.quarkus", name = "quarkus-config-yaml" }
+quarkus-jfr = { group = "io.quarkus", name = "quarkus-jfr" }
+quarkus-reactive-pg-client = { group = "io.quarkus", name = "quarkus-reactive-pg-client" }
+quarkus-reactive-mysql-client = { group = "io.quarkus", name = "quarkus-reactive-mysql-client" }
+quarkus-logging-json = { group = "io.quarkus", name = "quarkus-logging-json" }
+quarkus-jdbc-mysql = { group = "io.quarkus", name = "quarkus-jdbc-mysql" }
+quarkus-arc = { group = "io.quarkus", name = "quarkus-arc" }
+quarkus-smallrye-openapi = { group = "io.quarkus", name = "quarkus-smallrye-openapi" }
+quarkus-quartz = { group = "io.quarkus", name = "quarkus-quartz" }
+quarkus-hibernate-validator = { group = "io.quarkus", name = "quarkus-hibernate-validator" }
+quarkus-smallrye-jwt-build = { group = "io.quarkus", name = "quarkus-smallrye-jwt-build" }
+quarkus-smallrye-metrics = { group = "io.quarkus", name = "quarkus-smallrye-metrics" }
+quarkus-rest-client-jackson = { group = "io.quarkus", name = "quarkus-rest-client-jackson" }
+quarkus-minio = { group = "io.quarkiverse.minio", name = "quarkus-minio", version.ref = "quarkus-minio" }
+quarkus-minio-native = { group = "io.quarkiverse.minio", name = "quarkus-minio-native", version.ref = "quarkus-minio" }
+mapstruct = { group = "org.mapstruct", name = "mapstruct", version.ref = "mapstruct" }
+mapstruct-annotation-processor = { group = "org.mapstruct", name = "mapstruct-processor", version.ref = "mapstruct" }
+jetbrains-annotation = { group = "org.jetbrains", name = "annotations", version = "26.0.2" }
+
+vavr = { group = "io.vavr", name = "vavr", version.ref = "vavr" }
+
+record-builder-processor = { group = "io.soabase.record-builder", name = "record-builder-processor", version.ref = "record-builder" }
+record-builder-core = { group = "io.soabase.record-builder", name = "record-builder-core", version.ref = "record-builder" }
+
+apache-common-lang3 = { group = "org.apache.commons", name = "commons-lang3", version = "3.17.0" }
+
+hibernate-jpamodelgen = { group = "org.hibernate.orm", name = "hibernate-jpamodelgen" }
+
+agrona = { group = "org.agrona", name = "agrona", version = "2.2.4" }

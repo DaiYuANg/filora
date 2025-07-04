@@ -1,7 +1,11 @@
 package org.filora;
 
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import io.quarkus.hibernate.reactive.panache.PanacheEntity;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 
 /**
@@ -24,6 +28,15 @@ import jakarta.persistence.Entity;
  * }
  */
 @Entity
-public class MyEntity extends PanacheEntity {
-    public String field;
+@Getter
+@Setter
+@ToString
+public class FileMeta extends PanacheEntity {
+  private String field;
+  private String filename;
+
+  @Column(length = 1024)
+  private String description;
+
+  private String storagePath;
 }
