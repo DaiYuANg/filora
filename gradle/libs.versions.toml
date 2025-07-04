@@ -1,0 +1,9 @@
+[versions]
+quarkus = "3.24.2"
+
+[plugins]
+quarkus = { id = "io.quarkus", version.ref = "quarkus" }
+
+[libraries]
+quarkus-bom = { group = "io.quarkus.platform", name = "quarkus-bom", version.ref = "quarkus" }
+quarkus-blaze-persistence-bom = { group = "io.quarkus.platform", name = "quarkus-blaze-persistence-bom", version.ref = "quarkus" }
