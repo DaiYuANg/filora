@@ -29,7 +29,7 @@ public class UploadResource {
   @Consumes(MediaType.MULTIPART_FORM_DATA)
   @WithTransaction
   public Uni<Response> uploadFile(UploadForm form) {
-    @Cleanup val fileStream = FileUtils.openInputStream(form.file().uploadedFile().toFile());
+    val fileStream = FileUtils.openInputStream(form.file().uploadedFile().toFile());
     val filename = form.file().fileName();
     log.info("Uploading file {}", filename);
     val saveMeta = s3Service.saveMetadata(filename, form);
