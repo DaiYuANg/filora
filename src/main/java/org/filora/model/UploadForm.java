@@ -1,4 +1,4 @@
-package org.filora;
+package org.filora.model;
 
 import io.soabase.recordbuilder.core.RecordBuilder;
 import org.jboss.resteasy.reactive.RestForm;

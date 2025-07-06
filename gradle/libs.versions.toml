@@ -22,11 +22,14 @@ quarkus-jdbc-postgresql = { group = "io.quarkus", name = "quarkus-jdbc-postgresq
 quarkus-rest-jackson = { group = "io.quarkus", name = "quarkus-rest-jackson" }
 quarkus-hibernate-reactive-panache = { group = "io.quarkus", name = "quarkus-hibernate-reactive-panache" }
 quarkus-agroal = { group = "io.quarkus", name = "quarkus-agroal" }
+quarkus-smallrye-context-propagation = { group = "io.quarkus", name = "quarkus-smallrye-context-propagation" }
 quarkus-hibernate-reactive = { group = "io.quarkus", name = "quarkus-hibernate-reactive" }
 quarkus-info = { group = "io.quarkus", name = "quarkus-info" }
 quarkus-rest-client = { group = "io.quarkus", name = "quarkus-rest-client" }
 quarkus-config-yaml = { group = "io.quarkus", name = "quarkus-config-yaml" }
 quarkus-jfr = { group = "io.quarkus", name = "quarkus-jfr" }
+quarkus-container-image-podman = { group = "io.quarkus", name = "quarkus-container-image-podman" }
+quarkus-systemd-notify = { group = "io.quarkiverse.systemd.notify", name = "quarkus-systemd-notify", version = "1.0.2" }
 quarkus-reactive-pg-client = { group = "io.quarkus", name = "quarkus-reactive-pg-client" }
 quarkus-reactive-mysql-client = { group = "io.quarkus", name = "quarkus-reactive-mysql-client" }
 quarkus-logging-json = { group = "io.quarkus", name = "quarkus-logging-json" }
@@ -40,10 +43,12 @@ quarkus-smallrye-metrics = { group = "io.quarkus", name = "quarkus-smallrye-metr
 quarkus-rest-client-jackson = { group = "io.quarkus", name = "quarkus-rest-client-jackson" }
 quarkus-minio = { group = "io.quarkiverse.minio", name = "quarkus-minio", version.ref = "quarkus-minio" }
 quarkus-minio-native = { group = "io.quarkiverse.minio", name = "quarkus-minio-native", version.ref = "quarkus-minio" }
+quarkus-quinoa = { group = "io.quarkiverse.quinoa", name = "quarkus-quinoa", version = "2.5.4" }
 mapstruct = { group = "org.mapstruct", name = "mapstruct", version.ref = "mapstruct" }
 mapstruct-annotation-processor = { group = "org.mapstruct", name = "mapstruct-processor", version.ref = "mapstruct" }
 jetbrains-annotation = { group = "org.jetbrains", name = "annotations", version = "26.0.2" }
 
+tika = { group = "org.apache.tika", name = "tika-core", version = "3.2.0" }
 vavr = { group = "io.vavr", name = "vavr", version.ref = "vavr" }
 
 record-builder-processor = { group = "io.soabase.record-builder", name = "record-builder-processor", version.ref = "record-builder" }

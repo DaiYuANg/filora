@@ -1,4 +1,4 @@
-package org.filora;
+package org.filora.client;
 
 import io.minio.*;
 import io.minio.errors.*;

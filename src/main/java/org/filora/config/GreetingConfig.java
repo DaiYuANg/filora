@@ -1,4 +1,4 @@
-package org.filora;
+package org.filora.config;
 
 import io.smallrye.config.ConfigMapping;
 import io.smallrye.config.WithName;

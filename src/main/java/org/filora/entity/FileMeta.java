@@ -1,4 +1,4 @@
-package org.filora;
+package org.filora.entity;
 
 import io.quarkus.hibernate.reactive.panache.PanacheEntity;
 import jakarta.persistence.Column;

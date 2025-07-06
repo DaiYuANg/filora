@@ -1,6 +1,13 @@
 greeting:
   message: "hello"
 quarkus:
+  http:
+    body:
+      preallocate-body-buffer: true
+    virtual: true
+    enable-compression: true
+    limits:
+      max-body-size: 10240M
   datasource:
     db-kind: postgresql
   log:
