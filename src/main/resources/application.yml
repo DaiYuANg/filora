@@ -7,4 +7,4 @@ quarkus:
     console:
       json:
         enabled: false
-    level: DEBUG
+    level: INFO
