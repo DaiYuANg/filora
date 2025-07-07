@@ -40,6 +40,7 @@ dependencies {
   implementation(libs.quarkus.reactive.pg.client)
   implementation(libs.jetbrains.annotation)
   implementation(libs.quarkus.quinoa)
+  implementation(libs.quarkus.antivirus)
   implementation(libs.quarkus.minio)
   implementation(libs.quarkus.minio.native)
   implementation(libs.quarkus.smallrye.context.propagation)

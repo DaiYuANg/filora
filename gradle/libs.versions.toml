@@ -43,7 +43,8 @@ quarkus-smallrye-metrics = { group = "io.quarkus", name = "quarkus-smallrye-metr
 quarkus-rest-client-jackson = { group = "io.quarkus", name = "quarkus-rest-client-jackson" }
 quarkus-minio = { group = "io.quarkiverse.minio", name = "quarkus-minio", version.ref = "quarkus-minio" }
 quarkus-minio-native = { group = "io.quarkiverse.minio", name = "quarkus-minio-native", version.ref = "quarkus-minio" }
-quarkus-quinoa = { group = "io.quarkiverse.quinoa", name = "quarkus-quinoa", version = "2.5.4" }
+quarkus-quinoa = { group = "io.quarkiverse.quinoa", name = "quarkus-quinoa", version = "2.5.5" }
+quarkus-antivirus = { group = "io.quarkiverse.antivirus", name = "quarkus-antivirus", version = "1.2.5" }
 mapstruct = { group = "org.mapstruct", name = "mapstruct", version.ref = "mapstruct" }
 mapstruct-annotation-processor = { group = "org.mapstruct", name = "mapstruct-processor", version.ref = "mapstruct" }
 jetbrains-annotation = { group = "org.jetbrains", name = "annotations", version = "26.0.2" }
