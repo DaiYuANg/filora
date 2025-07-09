@@ -1,5 +1,5 @@
 [versions]
-quarkus = "3.24.2"
+quarkus = "3.24.3"
 quarkus-minio = "3.8.4"
 mapstruct = "1.6.3"
 record-builder = "47"
@@ -10,7 +10,7 @@ quarkus = { id = "io.quarkus", version.ref = "quarkus" }
 lombok = { id = "name.remal.lombok", version = "3.0.1" }
 dotenv = { id = "co.uzzu.dotenv.gradle", version = "4.0.0" }
 version-check = { id = "com.github.ben-manes.versions", version = "0.52.0" }
-git = { id = "com.xenoterracide.gradle.git", version = "0.12.1" }
+git = { id = "com.xenoterracide.gradle.git", version = "0.13.0" }
 
 [libraries]
 quarkus-bom = { group = "io.quarkus.platform", name = "quarkus-bom", version.ref = "quarkus" }
@@ -28,7 +28,7 @@ quarkus-info = { group = "io.quarkus", name = "quarkus-info" }
 quarkus-rest-client = { group = "io.quarkus", name = "quarkus-rest-client" }
 quarkus-config-yaml = { group = "io.quarkus", name = "quarkus-config-yaml" }
 quarkus-jfr = { group = "io.quarkus", name = "quarkus-jfr" }
-quarkus-container-image-podman = { group = "io.quarkus", name = "quarkus-container-image-podman" }
+quarkus-container-image-docker = { group = "io.quarkus", name = "quarkus-container-image-docker" }
 quarkus-systemd-notify = { group = "io.quarkiverse.systemd.notify", name = "quarkus-systemd-notify", version = "1.0.2" }
 quarkus-reactive-pg-client = { group = "io.quarkus", name = "quarkus-reactive-pg-client" }
 quarkus-reactive-mysql-client = { group = "io.quarkus", name = "quarkus-reactive-mysql-client" }

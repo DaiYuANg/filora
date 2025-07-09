@@ -10,6 +10,7 @@ plugins {
 repositories {
   mavenCentral()
   mavenLocal()
+  google()
 }
 
 dependencies {
@@ -52,7 +53,7 @@ dependencies {
   implementation(libs.mapstruct)
   annotationProcessor(libs.mapstruct.annotation.processor)
   implementation(libs.vavr)
-  implementation(libs.quarkus.container.image.podman)
+  implementation(libs.quarkus.container.image.docker)
   implementation(libs.quarkus.systemd.notify)
   implementation(libs.apache.common.lang3)
   implementation(libs.quarkus.smallrye.openapi)
