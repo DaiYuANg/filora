@@ -13,6 +13,8 @@ repositories {
   google()
 }
 
+
+
 dependencies {
   implementation(enforcedPlatform(libs.quarkus.bom))
   annotationProcessor(enforcedPlatform(libs.quarkus.bom))
@@ -62,7 +64,7 @@ dependencies {
 }
 
 group = "org.filora"
-version = "1.0-SNAPSHOT"
+version = git.commit
 
 java {
   sourceCompatibility = JavaVersion.VERSION_21

@@ -78,19 +78,40 @@
 #   accessed directly. (example: "foo.example.com,bar.example.com")
 #
 ###
-FROM registry.access.redhat.com/ubi9/openjdk-21-runtime:1.22
+#FROM registry.access.redhat.com/ubi9/openjdk-21-runtime:1.22
+#
+#ENV LANGUAGE='en_US:en'
+#
+## We make four distinct layers so if there are application changes the library layers can be re-used
+#COPY --chown=185 build/quarkus-app/lib/ /deployments/lib/
+#COPY --chown=185 build/quarkus-app/*.jar /deployments/
+#COPY --chown=185 build/quarkus-app/app/ /deployments/app/
+#COPY --chown=185 build/quarkus-app/quarkus/ /deployments/quarkus/
+#
+#EXPOSE 8080
+#USER 185
+#ENV JAVA_OPTS_APPEND="-Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager"
+#ENV JAVA_APP_JAR="/deployments/quarkus-run.jar"
+#
+#ENTRYPOINT [ "/opt/jboss/container/java/run/run-java.sh" ]
 
-ENV LANGUAGE='en_US:en'
+FROM eclipse-temurin:21-jre-alpine
 
-# We make four distinct layers so if there are application changes the library layers can be re-used
-COPY --chown=185 build/quarkus-app/lib/ /deployments/lib/
-COPY --chown=185 build/quarkus-app/*.jar /deployments/
-COPY --chown=185 build/quarkus-app/app/ /deployments/app/
-COPY --chown=185 build/quarkus-app/quarkus/ /deployments/quarkus/
+# 创建非 root 用户（Alpine 中无 UID 185）
+RUN addgroup -g 1001 quarkus && adduser -D -u 1001 -G quarkus quarkus
+
+WORKDIR /deployments
+
+COPY build/quarkus-app/lib/ ./lib/
+COPY build/quarkus-app/*.jar ./
+COPY build/quarkus-app/app/ ./app/
+COPY build/quarkus-app/quarkus/ ./quarkus/
 
 EXPOSE 8080
-USER 185
-ENV JAVA_OPTS_APPEND="-Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager"
-ENV JAVA_APP_JAR="/deployments/quarkus-run.jar"
+USER 1001
 
-ENTRYPOINT [ "/opt/jboss/container/java/run/run-java.sh" ]
+ENV JAVA_OPTS="-Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager"
+ENV JAVA_APP_JAR="quarkus-run.jar"
+
+ENTRYPOINT ["java", "-jar", "quarkus-run.jar"]
+
